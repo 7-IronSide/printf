@@ -18,7 +18,9 @@ int print_bigS(va_list l, flags_t *f)
 
 	(void)f;
 	if (!s)
-		return (_puts("(null)"));
+		{
+		    return (_puts("(null)"));
+		}
 
 	for (i = 0; s[i]; i++)
 	{
@@ -51,13 +53,19 @@ int print_rev(va_list l, flags_t *f)
 
 	(void)f;
 	if (!s)
-		s = "(null)";
+		{
+		    s = "(null)";
+		}
 
 	while (s[i])
-		i++;
+		{
+		    i++;
+		}
 
 	for (j = i - 1; j >= 0; j--)
-		_putchar(s[j]);
+		{
+		    _putchar(s[j]);
+		}
 
 	return (i);
 }
@@ -86,7 +94,9 @@ int print_rot13(va_list l, flags_t *f)
 			for (i = 0; i <= 52; i++)
 			{
 				if (s[j] == rot13[i])
-					_putchar(ROT13[i]);
+					{
+					    _putchar(ROT13[i]);
+					}
 			}
 		}
 	}
